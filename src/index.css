@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Tungsten-bold';
+  src: url('/fonts/Tungsten-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DINNextW1G';
+  src: url('/fonts/dinnextw1g.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FF-Mark';
+  src: url('/fonts/FF-Mark-Medium.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.Tungsten-bold {
+  font-family: 'Tungsten-bold', sans-serif;
+}
+
+.DINNextW1G {
+  font-family: 'DINNextW1G', sans-serif;
+}
+
+.FF-Mark {
+  font-family: 'FF-Mark', sans-serif;
+}
+
+@theme inline {
+  --color-nav-background: var(--nav-background);
+  --color-primary-background: var(--primary-background);
+  --color-secondary-background: var(--secondary-background);
+}
+
+:root {
+  --nav-background: oklch(0.1776 0 0);
+  --primary-background: oklch(0.935 0.0074 80.72);
+  --secondary-background: oklch(0.6677 0.2199 21.34);
+}
+
+.dark {
+  
+}
+
+
