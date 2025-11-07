@@ -34,6 +34,15 @@
   font-family: 'FF-Mark', sans-serif;
 }
 
+.overlay-1 {
+    background: linear-gradient(to top, rgb(15, 25, 35) 0%, transparent 100%) center bottom / 100% 50% no-repeat;
+}
+
+.overlay-2 {
+    background: rgb(15, 25, 35);
+    opacity: 0.2;
+}
+
 @theme inline {
   --color-nav-background: var(--nav-background);
   --color-primary-background: var(--primary-background);
@@ -48,6 +57,15 @@
 
 .dark {
   
+}
+
+.primary-light-button {
+  font-family: 'DINNextW1G', sans-serif;
+  font-size: 20px;
+  color: var(--primary-background);
+  background-color: var(--secondary-background);
+  padding-inline: calc(var(--spacing) * 12);
+  padding-block: calc(var(--spacing) * 4);
 }
 
 
