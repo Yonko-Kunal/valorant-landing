@@ -2,6 +2,7 @@ import React from 'react'
 import Container from '../containter'
 import valorantText from '../../assets/PNGs/valorantText.webp'
 import { motion } from 'motion/react'
+import { colors } from '../../constants/colors'
 
 const Hero = () => {
     return (
@@ -12,7 +13,7 @@ const Hero = () => {
                 muted
                 playsInline
                 className='absolute h-full w-full object-cover z-10'>
-                <source src='/videos/hero/vct24prev.webm' type='video/webm' />
+                <source src='/videos/hero/vct25prev.webm' type='video/webm' />
                 <source src='/videos/hero/vct25prev.mp4' type='video/mp4' />
             </video>
             <div className='absolute inset-0 overlay-2 z-15'></div>
@@ -24,15 +25,18 @@ const Hero = () => {
                 </div>
                 <div>
                     <motion.button
-                        animate={{
-                            width: '200px'
+                        initial={{
+                            backgroundColor: colors.secondaryBackground,
+                            color: colors.primaryBackground
                         }}
-
                         transition={{
-                            delay: 1
+                            duration: 0.3
                         }}
-
-                        className='DINNextW1G relative text-xl text-primary-background bg-secondary-background px-12 py-4 hover:text-black hover:bg-primary-background'>
+                        whileHover={{
+                            backgroundColor: colors.primaryBackground,
+                            color: colors.navBackground,
+                        }}
+                        className='DINNextW1G relative text-xl px-12 py-4 cursor-pointer'>
                         PLAY NOW
                     </motion.button>
                 </div>
