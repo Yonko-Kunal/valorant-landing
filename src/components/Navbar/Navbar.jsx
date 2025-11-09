@@ -2,10 +2,12 @@ import React from 'react'
 import Container from '../containter'
 import RiotGamesLogo from '../../assets/Svg/RiotGamesLogo'
 import ValorantLogo from '../../assets/Svg/ValorantLogo'
+import { gsap } from 'gsap'
 
 const Navbar = () => {
+
     return (
-        <Container>
+        <Container className="navbar">
             <nav className='flex items-center justify-between max-width-full h-20 bg-nav-background px-10'>
                 {/* left nav */}
                 <div className='flex items-center justify-center gap-10'>

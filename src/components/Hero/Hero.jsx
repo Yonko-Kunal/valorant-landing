@@ -6,7 +6,7 @@ import { colors } from '../../constants/colors'
 
 const Hero = () => {
     return (
-        <Container className='relative h-[80vh] w-full overflow-hidden'>
+        <Container className='hero relative h-[80vh] w-full overflow-hidden blur-sm'>
             <video
                 autoPlay
                 loop
@@ -20,10 +20,10 @@ const Hero = () => {
             <div className='absolute inset-0 overlay-1 z-15'></div>
             <div className='Tungsten-bold flex items-start top-15 left-10 flex-col w-full h-full relative z-20 text-5xl gap-12'>
                 <div className='flex flex-col items-start gap-6'>
-                    <img src={valorantText} alt="textLogo" />
-                    <p className='text-primary-background text-3xl w-100'>VALORANT — A 5v5 tactical shooter featuring agents with unique abilities</p>
+                    <img className='hero-title' src={valorantText} alt="textLogo" />
+                    <p className='hero-text text-primary-background text-3xl w-100'>VALORANT — A 5v5 tactical shooter featuring agents with unique abilities</p>
                 </div>
-                <div>
+                <div className='hero-button'>
                     <motion.button
                         initial={{
                             backgroundColor: colors.secondaryBackground,

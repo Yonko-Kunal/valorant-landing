@@ -99,7 +99,21 @@ document.fonts.ready.then(() => {
             duration: 2.5,
             ease: 'power3.out'
         }, "<"
-        )
+        ).to(".hero", {
+            filter: "blur(0px)",
+            duration: 2.5,
+            ease: "power3.out"
+        }, "<").set([".hero-title", ".hero-text", ".hero-button"], {
+            opacity: 0,
+            y: 40
+        }, "<").to([".hero-title", ".hero-text", ".hero-button"], {
+            opacity: 1,
+            y: 0,
+            duration: 1.2,
+            stagger: 0.2,
+            ease: 'power4.out',
+        }, "<+=0.7")
+
 })
 
 
