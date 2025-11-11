@@ -92,7 +92,7 @@
   transform: translateX(-60%) scaleX(0);
   width: 55%;
   height: 100%;
-  background-color: var(--secondary-background);
+  background-color: var(--primary-background);
   transform-origin: left;
   will-change: transform;
 }
@@ -141,6 +141,17 @@
   color: var(--primary-background);
   opacity: 0.5;
 }
+
+
+/* cypher page css */
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-weight: bold;
+  color: #5581CA;
+}
+
 
 
 
