@@ -120,7 +120,7 @@ const Cypher = () => {
                 }, '<')
                 .to('.cypher-section', {
                     backgroundColor: "#000000",
-                    duration: 50,
+                    duration: 0,
                     ease: 'power2.inOut'
                 })
                 .to('.cypherTitle', {
