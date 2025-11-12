@@ -6,7 +6,7 @@ import { colors } from '../../constants/colors'
 
 const Hero = () => {
     return (
-        <Container className='hero relative h-[80vh] w-full overflow-hidden blur-sm'>
+        <Container className='hero relative h-[80vh] w-full overflow-hidden blur-sm z-20'>
             <video
                 autoPlay
                 loop

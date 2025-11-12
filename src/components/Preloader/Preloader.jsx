@@ -5,6 +5,11 @@ gsap.registerPlugin(SplitText) //required so that gsap knows that we will be usi
 
 //to ensure that when spliting and animating the text the font is already applied
 document.fonts.ready.then(() => {
+    // Disable scrolling during preloader
+    document.body.style.overflow = 'hidden'
+    document.body.style.height = '100vh'
+    document.body.style.position = 'fixed'
+    document.body.style.width = '100%'
     function createSplitTexts(elements) {
         const splits = {}
 
@@ -112,7 +117,13 @@ document.fonts.ready.then(() => {
             duration: 1.2,
             stagger: 0.2,
             ease: 'power4.out',
-        }, "<+=0.7")
+        }, "<+=0.7").call(() => {
+            // Re-enable scrolling after preloader animation completes
+            document.body.style.overflow = 'auto'
+            document.body.style.height = 'auto'
+            document.body.style.position = 'static'
+            document.body.style.width = 'auto'
+        })
 
 })
 
