@@ -1,10 +1,32 @@
-import React from 'react'
+import { useEffect } from 'react'
 import Container from '../containter'
 import valorantText from '../../assets/PNGs/valorantText.webp'
 import { motion } from 'motion/react'
 import { colors } from '../../constants/colors'
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const Hero = () => {
+    useEffect(() => {
+        gsap.set(".hero", {
+            clipPath: "polygon(14% 0, 72% 0, 88% 90%, 0 95%)",
+            borderRadius: "0% 0% 40% 10%",
+        })
+        gsap.from(".hero", {
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            borderRadius: "0% 0% 0% 0%",
+            ease: "power1.inOut",
+            scrollTrigger: {
+                trigger: ".hero",
+                start: "center center",
+                end: "bottom center",
+                scrub: true,
+            },
+        })
+    }, [])
+
     return (
         <Container className='hero relative h-[80vh] w-full overflow-hidden blur-sm z-20'>
             <video

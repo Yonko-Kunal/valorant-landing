@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar'
 import Preloader from './components/Preloader/Preloader'
 import Cypher from './components/Cypher/Cypher'
 import ReactLenis from 'lenis/react'
+import About from './components/About/About'
 
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
         <Navbar />
         <Hero />
         <Cypher />
+        <About />
       </Containter>
     </ReactLenis>
 

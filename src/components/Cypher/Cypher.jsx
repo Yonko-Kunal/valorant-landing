@@ -48,58 +48,91 @@ const Cypher = () => {
             gsap.timeline({
                 scrollTrigger: {
                     trigger: '.cypher-section',
-                    start: 'top 60%',
+                    start: 'top top',
+                    end: '+=5000',
                     toggleActions: 'play none none none',
-                    // scrub: 1,
-                    // pin: true
+                    scrub: 1.4,
+                    pin: true
                 }
             }).to(".cypherPng", {
                 x: "0%",
                 opacity: "100%",
-                duration: 0.4,
+                duration: 20,
             }).to(".overlayBox", {
                 x: "0%",
                 opacity: "100%",
                 delay: 0.6,
-                duration: 0.4,
+                duration: 20,
             }).to(".agentText", {
                 x: "0%",
-                opacity: "100%"
+                opacity: "100%",
+                duration: 20,
             }).to(splits.cypherTitleHeading.lines, {
                 y: "0%",
                 stagger: 0.1,
-                duration: 1,
+                duration: 10,
                 ease: 'power4.inOut',
             }).to(splits.cypherTitle.chars, {
                 x: "0%",
                 stagger: 0.1,
-                duration: 0.4,
+                duration: 40,
                 ease: 'power4.inOut'
             }).to(splits.cypherRoleHeading.lines, {
                 y: "0%",
                 stagger: 0.1,
-                duration: 0.4,
+                duration: 40,
                 ease: 'power4.inOut',
             }).to(splits.cypherRole.lines, {
                 y: "0%",
                 stagger: 0.1,
-                duration: 0.4,
+                duration: 40,
                 ease: 'power4.inOut',
             }).to(splits.cypherBioHeading.lines, {
                 y: "0%",
                 stagger: 0.1,
-                duration: 0.4,
+                duration: 40,
                 ease: 'power4.inOut',
             }).to(splits.cypherBio.lines, {
                 y: "0%",
                 stagger: 0.1,
-                duration: 0.4,
+                duration: 40,
                 ease: 'power4.inOut',
             }).to(".bioUnderLine", {
                 y: "0%",
                 opacity: "100%",
                 ease: 'power4.in'
-            })
+            }).to({}, { duration: 20 })
+                .to('.cypherTitle', {
+                    scale: 100,
+                    x: '200%',
+                    y: '-80%',
+                    duration: 200,
+                    ease: 'power2.inOut',
+                }, 'zoom')
+                .to(['.cypherPng', '.overlayBox', '.agentText', splits.cypherTitleHeading.lines, splits.cypherRoleHeading.lines, splits.cypherRole.lines, splits.cypherBioHeading.lines, splits.cypherBio.lines, '.bioUnderLine'], {
+                    opacity: 0,
+                    duration: 100,
+                }, 'zoom')
+
+                .to(['.cypherPng', '.overlayBox', '.agentText', splits.cypherTitleHeading.lines, splits.cypherRoleHeading.lines, splits.cypherRole.lines, splits.cypherBioHeading.lines, splits.cypherBio.lines, '.bioUnderLine'], {
+                    opacity: 0,
+                    duration: 100,
+                }, '<')
+                .to('.cypher-section', {
+                    backgroundColor: "#000000",
+                    duration: 50,
+                    ease: 'power2.inOut'
+                })
+                .to('.cypherTitle', {
+                    scale: 0,
+
+                }).to('.cypher-section', {
+                    duration: 40,
+                    ease: 'power2.inOut',
+                    onComplete: () => ScrollTrigger.refresh()
+                })
+
+
         })
     }, [])
 
@@ -120,7 +153,9 @@ const Cypher = () => {
     ]
     return (
 
-        <Container className='cypher-section h-screen relative flex items-center justify-between gap-20 z-19'>
+        <Container className='cypher-section h-screen relative flex items-center justify-between gap-20 z-19 overflow-hidden'>
+
+
             {/* left */}
             <div className='relative flex items-center justify-center flex-1'>
                 <div className='flex items-center justify-center flex-1'>
@@ -155,8 +190,9 @@ const Cypher = () => {
                         <img className=' mix-blend-multiply w-216 z-10' src={OverlaySVG} alt="overlay" />
                     </div>
                 </div>
-
             </div>
+
+
             {/* right */}
             <div className='flex flex-col flex-1 gap-15 justify-center'>
                 <div className='flex items-start flex-col'>
@@ -178,6 +214,8 @@ const Cypher = () => {
                     </div>
                 </div>
             </div>
+
+
         </Container>
 
 
