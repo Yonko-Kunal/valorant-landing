@@ -1,5 +1,5 @@
 import React from 'react'
-import Container from '../containter'
+import Container from '../Containter'
 import RiotGamesLogo from '../../assets/Svg/RiotGamesLogo'
 import ValorantLogo from '../../assets/Svg/ValorantLogo'
 import { gsap } from 'gsap'

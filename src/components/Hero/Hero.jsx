@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import Container from '../containter'
+import Container from '../Containter'
 import valorantText from '../../assets/PNGs/valorantText.webp'
 import { motion } from 'motion/react'
 import { colors } from '../../constants/colors'

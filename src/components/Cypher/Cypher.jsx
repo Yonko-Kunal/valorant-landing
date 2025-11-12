@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import Container from '../containter'
+import Container from '../Containter'
 import CypherImg from '../../assets/PNGs/cypher.webp'
 import OverlaySVG from '../../assets/Svg/overlaySVG.svg'
 import { motion } from 'motion/react'
