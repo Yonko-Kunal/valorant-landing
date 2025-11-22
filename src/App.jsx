@@ -6,6 +6,7 @@ import Preloader from './components/Preloader/Preloader'
 import Cypher from './components/Cypher/Cypher'
 import ReactLenis from 'lenis/react'
 import About from './components/About/About'
+import Footer from './components/Footer/Footer'
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
         <Hero />
         <Cypher />
         <About />
+        <Footer />
       </Containter>
     </ReactLenis>
 

@@ -2,6 +2,7 @@ import React from 'react'
 import Container from '../Containter'
 import { motion } from 'motion/react'
 import { colors } from '../../constants/colors'
+import { Tilt } from '../motion-primitives/tilt'
 
 const About = () => {
     return (
@@ -31,6 +32,7 @@ const About = () => {
             </div>
             {/* right */}
             <div className='flex-1 flex items-center justify-center'>
+ <Tilt rotationFactor={4} isRevese>
                 <video
                     autoPlay
                     loop
@@ -40,6 +42,7 @@ const About = () => {
                     <source src='/videos/About/valo_game_prev.webm' type='video/webm' />
                     <source src='/videos/About/valo_game_prev.mp4' type='video/mp4' />
                 </video>
+                </Tilt>
             </div>
         </Container>
     )
