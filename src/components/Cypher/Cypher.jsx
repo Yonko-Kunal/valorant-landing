@@ -153,13 +153,13 @@ const Cypher = () => {
     ]
     return (
 
-        <Container className='cypher-section h-screen relative flex items-center justify-between gap-20 z-19 overflow-hidden'>
+        <Container className='cypher-section md:h-screen min-h-screen relative flex md:flex-row flex-col items-center justify-between md:gap-20 gap-0 z-19 md:overflow-hidden overflow-x-hidden'>
 
 
             {/* left */}
-            <div className='relative flex items-center justify-center flex-1'>
+            <div className='relative flex items-center justify-center flex-1 w-full md:w-auto'>
                 <div className='flex items-center justify-center flex-1'>
-                    <div className='mb-4 overflow-hidden h-screen'>
+                    <div className='mb-4 overflow-hidden md:h-screen h-[50vh]'>
                         <motion.div className='agentText'
                             animate={{
                                 y: [0, "-50%"]
@@ -171,19 +171,19 @@ const Cypher = () => {
                                 ease: 'linear'
                             }}
                         >
-                            <h1 className='vertical-text Tungsten-bold text-[10rem] tracking-wide'>
+                            <h1 className='vertical-text Tungsten-bold md:text-[10rem] text-8xl tracking-wide'>
                                 {agents.map((item, index) => (
                                     <span key={index}>{item.name}.</span>
                                 ))}
                             </h1>
-                            <h1 className='vertical-text Tungsten-bold text-[10rem] tracking-wide'>
+                            <h1 className='vertical-text Tungsten-bold md:text-[10rem] text-8xl tracking-wide'>
                                 {agents.map((item, index) => (
                                     <span key={`duplicate-${index}`}>{item.name}.</span>
                                 ))}
                             </h1>
                         </motion.div>
                     </div>
-                    <div className='cypherPng w-[650px]'>
+                    <div className='cypherPng md:w-[650px] w-[300px]'>
                         <img src={CypherImg} alt="cypher" className='w-full h-auto' />
                     </div>
                     <div className='overlayBox absolute bottom-5 left-0  bg-[#5B8FF0]/90 mix-blend-multiply z-10'>
@@ -194,20 +194,20 @@ const Cypher = () => {
 
 
             {/* right */}
-            <div className='flex flex-col flex-1 gap-15 justify-center'>
+            <div className='flex flex-col flex-1 gap-2 md:gap-15 justify-center px-6 md:px-0'>
                 <div className='flex items-start flex-col'>
-                    <h3 className='cypherHead FF-Mark font-bold text-2xl'>CHARACTER</h3>
-                    <h1 className='cypherTitle Tungsten-bold text-[12rem] leading-none'>CYPHER</h1>
+                    <h3 className='cypherHead FF-Mark font-bold text-xl md:text-2xl'>CHARACTER</h3>
+                    <h1 className='cypherTitle Tungsten-bold text-8xl md:text-[12rem] leading-none'>CYPHER</h1>
                 </div>
-                <div className='flex flex-col gap-8'>
+                <div className='flex flex-col gap-3 md:gap-8'>
                     <div className='flex items-start flex-col'>
-                        <h3 className='cypherRoleHead FF-Mark font-bold text-2xl'>ROLE</h3>
-                        <h1 className='cypherRole Tungsten-bold text-6xl'>SENTINEL</h1>
+                        <h3 className='cypherRoleHead FF-Mark font-bold text-xl md:text-2xl'>ROLE</h3>
+                        <h1 className='cypherRole Tungsten-bold text-5xl md:text-6xl'>SENTINEL</h1>
                     </div>
                     <div className='flex items-start flex-col'>
-                        <h3 className='cypherBioHead FF-Mark font-bold text-2xl mb-2'>BIOGRAPHY</h3>
-                        <div>
-                            <p className='cypherBio FF-Mark max-w-xl leading-relaxed text-lg mb-10'>The Moroccan information broker, Cypher is a one-man surveillance network who keeps tabs on the enemy's every move. No secret is safe. No maneuver goes unseen. Cypher is always watching.</p>
+                        <h3 className='cypherBioHead FF-Mark font-bold text-xl md:text-2xl mb-2'>BIOGRAPHY</h3>
+                        <div className='w-full flex flex-col items-start'>
+                            <p className='cypherBio FF-Mark max-w-xl leading-relaxed text-sm md:text-lg mb-12 md:mb-10'>The Moroccan information broker, Cypher is a one-man surveillance network who keeps tabs on the enemy's every move. No secret is safe. No maneuver goes unseen. Cypher is always watching.</p>
                             <div className='bioUnderLine w-full h-0.5 bg-[#5581CA]'></div>
                         </div>
 

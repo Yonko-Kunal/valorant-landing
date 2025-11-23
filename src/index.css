@@ -155,6 +155,19 @@
   color: #5581CA;
 }
 
+@media (max-width: 768px) {
+  .preloader-logo h1 {
+    font-size: 3rem;
+  }
 
+  .preloader-footer {
+    width: 80%;
+    bottom: 2rem;
+  }
+
+  .preloader-footer p {
+    font-size: 0.75rem;
+  }
+}
 
 
