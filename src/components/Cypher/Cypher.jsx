@@ -39,7 +39,7 @@ const Cypher = () => {
             gsap.set([splits.cypherRoleHeading.lines], { y: "100%" })
             gsap.set([splits.cypherRole.lines], { y: "100%" })
             gsap.set([splits.cypherBioHeading.lines], { y: "100%" })
-            gsap.set([splits.cypherBio.lines], { y: "100%" })
+            gsap.set([splits.cypherBio.lines], { y: "200%", filter: "blur(5px)" })
             gsap.set(".cypherPng", { x: "100%", opacity: "0%" })
             gsap.set(".overlayBox", { x: "-100%", opacity: "0%" })
             gsap.set(".bioUnderLine", { y: "100%", opacity: "0%" })
@@ -97,14 +97,15 @@ const Cypher = () => {
                 stagger: 0.1,
                 duration: 40,
                 ease: 'power4.inOut',
+                filter: "blur(0px)"
             }).to(".bioUnderLine", {
                 y: "0%",
                 opacity: "100%",
                 ease: 'power4.in'
             }).to({}, { duration: 20 })
                 .to('.cypherTitle', {
-                    scale: 100,
-                    x: '200%',
+                    scale: 120,
+                    x: '-700%',
                     y: '-80%',
                     duration: 200,
                     ease: 'power2.inOut',
