@@ -153,7 +153,7 @@ const Cypher = () => {
     ]
     return (
 
-        <Container className='cypher-section md:h-screen min-h-screen relative flex md:flex-row flex-col items-center justify-between md:gap-20 gap-0 z-19 md:overflow-hidden overflow-x-hidden'>
+        <Container className='cypher-section md:h-screen min-h-screen relative flex md:flex-row flex-col items-center justify-between md:gap-20 gap-0 z-19 overflow-hidden'>
 
 
             {/* left */}
@@ -196,19 +196,19 @@ const Cypher = () => {
             {/* right */}
             <div className='flex flex-col flex-1 gap-2 md:gap-15 justify-center px-6 md:px-0'>
                 <div className='flex items-start flex-col'>
-                    <h3 className='cypherHead FF-Mark font-bold text-xl md:text-2xl'>CHARACTER</h3>
-                    <h1 className='cypherTitle Tungsten-bold text-8xl md:text-[12rem] leading-none'>CYPHER</h1>
+                    <h3 className='cypherHead FF-Mark font-bold text-md md:text-2xl'>CHARACTER</h3>
+                    <h1 className='cypherTitle Tungsten-bold text-7xl md:text-[12rem] leading-none'>CYPHER</h1>
                 </div>
                 <div className='flex flex-col gap-3 md:gap-8'>
                     <div className='flex items-start flex-col'>
-                        <h3 className='cypherRoleHead FF-Mark font-bold text-xl md:text-2xl'>ROLE</h3>
-                        <h1 className='cypherRole Tungsten-bold text-5xl md:text-6xl'>SENTINEL</h1>
+                        <h3 className='cypherRoleHead FF-Mark font-bold text-md md:text-2xl'>ROLE</h3>
+                        <h1 className='cypherRole Tungsten-bold text-4xl md:text-6xl'>SENTINEL</h1>
                     </div>
                     <div className='flex items-start flex-col'>
-                        <h3 className='cypherBioHead FF-Mark font-bold text-xl md:text-2xl mb-2'>BIOGRAPHY</h3>
+                        <h3 className='cypherBioHead FF-Mark font-bold text-md md:text-2xl mb-2'>BIOGRAPHY</h3>
                         <div className='w-full flex flex-col items-start'>
-                            <p className='cypherBio FF-Mark max-w-xl leading-relaxed text-sm md:text-lg mb-12 md:mb-10'>The Moroccan information broker, Cypher is a one-man surveillance network who keeps tabs on the enemy's every move. No secret is safe. No maneuver goes unseen. Cypher is always watching.</p>
-                            <div className='bioUnderLine w-full h-0.5 bg-[#5581CA]'></div>
+                            <p className='cypherBio FF-Mark max-w-xl leading-snug text-sm md:text-lg mb-12 md:mb-10'>The Moroccan information broker, Cypher is a one-man surveillance network who keeps tabs on the enemy's every move. No secret is safe. No maneuver goes unseen. Cypher is always watching.</p>
+                            <div className='bioUnderLine md:w-[65%] w-full h-0.5 bg-[#5581CA]'></div>
                         </div>
 
                     </div>

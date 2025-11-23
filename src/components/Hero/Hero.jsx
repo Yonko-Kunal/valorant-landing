@@ -49,7 +49,7 @@ const Hero = () => {
                         abilities
                     </p>
                 </div>
-                <div className="hero-button">
+                <div className="hero-button w-full">
                     <motion.button
                         initial={{
                             backgroundColor: colors.secondaryBackground,
@@ -62,7 +62,7 @@ const Hero = () => {
                             backgroundColor: colors.primaryBackground,
                             color: colors.navBackground,
                         }}
-                        className="DINNextW1G relative text-xl md:px-12 px-30 py-4 cursor-pointer"
+                        className="DINNextW1G relative text-xl px-12 py-4 md:w-70 w-full cursor-pointer "
                     >
                         PLAY NOW
                     </motion.button>
